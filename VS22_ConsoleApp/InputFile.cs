@@ -25,8 +25,6 @@ namespace VS22_ConsoleApp
 
             Name = name.Substring(0, name.LastIndexOf('.'));
             Extension = extension;
-
-            
         }
     }
 }

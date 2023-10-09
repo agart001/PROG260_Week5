@@ -1,5 +1,5 @@
 
-using PROG260_Week5.Interface
+using PROG260_Week5.Interfaces;
 
 namespace PROG260_Week5.FileEngines
 {
@@ -7,10 +7,12 @@ namespace PROG260_Week5.FileEngines
     {
         public override void Process<T>(IFile file)
         {
+            /*
             using(StreamReader reader = new StreamReader(file.Path))
             {
-                T obj = JsonConvert.DeserializeObject<T>(reader.ReadToEnd());
+                T obj = JsonConverter.DeserializeObject<T>(reader.ReadToEnd());
             }
+            */
         }
     }
 }
