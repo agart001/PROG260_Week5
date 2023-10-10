@@ -14,7 +14,7 @@ namespace PROG260_Week5.FileEngines
             using(FileStream stream = File.Open(file.Path, FileMode.Open))
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(Grocery));
-                var grocery = (Grocery)serializer.Deserialize(stream);
+                Grocery grocery = (Grocery)serializer.Deserialize(stream);
 
                 int lineCount = 1;
                 using(StreamWriter writer =  new StreamWriter($"{file.Name}_out.txt", true))
