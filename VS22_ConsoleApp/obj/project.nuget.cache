@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Wz0bWsTzFk3t6olosWsvjWOYm3HxjCAYpTVS/sGIyPCiVsYy1rJ0+BLGqYnCqdv9gR8d1c8yov5xAPk9okOHmg==",
+  "dgSpecHash": "DoxQDtF20Dltbfv/AibxsEIlv7o/2N8z4/ufiAhF5Pf9c+wyZKIFgQPLftuQ11b/tZCoKhvOZOYLGdhi1E2cBQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\agart\\Documents\\GitHub\\PROG260\\PROG260_Week5\\VS22_ConsoleApp\\VS22_ConsoleApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\agart\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

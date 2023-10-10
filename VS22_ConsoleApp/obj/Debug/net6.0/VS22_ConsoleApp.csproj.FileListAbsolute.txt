@@ -13,3 +13,5 @@ C:\Users\agart\Documents\GitHub\PROG260\PROG260_Week5\VS22_ConsoleApp\obj\Debug\
 C:\Users\agart\Documents\GitHub\PROG260\PROG260_Week5\VS22_ConsoleApp\obj\Debug\net6.0\VS22_ConsoleApp.pdb
 C:\Users\agart\Documents\GitHub\PROG260\PROG260_Week5\VS22_ConsoleApp\obj\Debug\net6.0\VS22_ConsoleApp.genruntimeconfig.cache
 C:\Users\agart\Documents\GitHub\PROG260\PROG260_Week5\VS22_ConsoleApp\obj\Debug\net6.0\ref\VS22_ConsoleApp.dll
+C:\Users\agart\Documents\GitHub\PROG260\PROG260_Week5\VS22_ConsoleApp\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\agart\Documents\GitHub\PROG260\PROG260_Week5\VS22_ConsoleApp\obj\Debug\net6.0\VS22_ConsoleApp.csproj.CopyComplete

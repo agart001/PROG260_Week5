@@ -1,25 +1,20 @@
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace PROG260_Week5.SampleJSON
 {
-    [JsonSerializable(typeof(Address))]
     public class Address
     {
-        [JsonPropertyName("streetAddress")]
+        [JsonProperty("streetAddress")]
         public string StreetAddress { get; set;}
 
-        [JsonPropertyName("city")]
+        [JsonProperty("city")]
         public string City { get; set;}
 
-        [JsonPropertyName("state")]
+        [JsonProperty("state")]
         public string State { get; set;}
 
-        [JsonPropertyName("postalCode")]
+        [JsonProperty("postalCode")]
         public string PostalCode { get; set;}
-
-        [JsonConstructor]
-        public Address(string streetAddress, string city, string state, string postalCode) =>
-            (StreetAddress, City, State, PostalCode) = (streetAddress, city, state, postalCode);
 
         public override string ToString()
         {

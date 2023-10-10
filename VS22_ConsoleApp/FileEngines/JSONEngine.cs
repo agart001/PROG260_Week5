@@ -1,6 +1,7 @@
 
 using PROG260_Week5.Interfaces;
-using System.Text.Json;
+using Newtonsoft.Json;
+using Microsoft.Win32.SafeHandles;
 
 namespace PROG260_Week5.FileEngines
 {
@@ -13,15 +14,9 @@ namespace PROG260_Week5.FileEngines
             string outputfile = $"{file.Dir}\\{file.Name}_.out.txt";
             using(StreamReader reader = new StreamReader(file.Path))
             {
-                string jsonstring = reader.ReadToEnd();
+                T obj = JsonConvert.DeserializeObject<T>(reader.ReadToEnd());
 
-                var options = new JsonSerializerOptions
-                {
-                    PropertyNamingPolicy = null,
-                    PropertyNameCaseInsensitive = true
-                };
-
-                T obj = JsonSerializer.Deserialize<T>(jsonstring, options);
+                if(obj == null) {return;}
 
                 using(StreamWriter writer = new StreamWriter(outputfile, true))
                 {
