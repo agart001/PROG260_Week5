@@ -6,6 +6,6 @@ namespace PROG260_Week5.SampleXML
     public class Grocery
     {
         [XmlElement(ElementName = "item")]
-        public List<GroceryItem> Inventory { get; set; }
+        public List<GroceryItem> Item { get; set; }
     }
 }

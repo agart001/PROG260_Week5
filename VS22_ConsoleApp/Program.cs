@@ -1,50 +1,39 @@
-﻿using PROG260_Week5.FileEngines;
+﻿using static PROG260_Week5.FileEngines.FEngine;
 using PROG260_Week5.Interfaces;
-using PROG260_Week5.SampleJSON;
+
+/// <summary>
+/// 
+/// All comments were generated using ChatGPT3 
+/// using a text document to as shell to copy paste.
+/// I used to following format when generating them:
+/// 
+/// generate code clarity comments for this c# { --- }:
+///     
+///     -
+///     -
+///     -
+///     
+/// 
+/// ChatGPT3 url: https://openai.com/
+/// 
+/// I also used the code sample from the PROG260_Week5.pptm
+/// to create the overrall Engine structure and the XML/JSON Engines.
+/// 
+/// </summary>
 
 namespace VS22_ConsoleApp
 {
+    // Define the main program class
     internal class Program
     {
+        // The main entry point of the application
         static void Main(string[] args)
         {
-            DirectoryInfo SampleDir = new DirectoryInfo($"{Directory.GetCurrentDirectory()}\\samples");
+            // Read files from the "Samples" directory
+            List<IFile> files = ReadFiles("Samples");
 
-            List<IFile> files = new List<IFile>();
-
-            foreach (FileInfo file in SampleDir.GetFiles())
-            {
-                files.Add(new InputFile(file.FullName, file.Name, file.Extension));
-            }
-
-
-            files = files.Where(file => file.Extension == ".json").ToList();
-            
-
-            foreach(IFile file in files)
-            {
-                FileEngine engine;
-
-                switch(file.Extension)
-                {
-                    case ".txt": 
-                        engine = new TXTEngine();
-                        engine.Process(file);
-                    break;
-                    case ".csv": 
-                        engine = new CSVEngine();
-                        engine.Process(file);
-                    break;
-                    case ".xml": 
-                        engine = new XMLEngine();
-                        engine.Process(file);
-                    break;
-                    case ".json": 
-                        engine = new JSONEngine();
-                        engine.Process<Student>(file);
-                    break;
-                }
-            }
+            // Process the read files using the file processing engine
+            ProcessFiles(files);
         }
     }
 }

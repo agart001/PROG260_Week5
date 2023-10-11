@@ -9,7 +9,7 @@ namespace PROG260_Week5.SampleXML
         public string Name { get; set; }
 
         [XmlElement(ElementName = "price")]
-        public double Price { get; set; }
+        public string Price { get; set ; }
 
         [XmlElement(ElementName = "uom")]
         public string UoM { get; set; }
