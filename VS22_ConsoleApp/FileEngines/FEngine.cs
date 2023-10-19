@@ -28,6 +28,13 @@ namespace PROG260_Week5.FileEngines
                 switch (file.Extension)
                 {
                     case ".txt":
+                        if(file.Name == "Produce")
+                        {
+                            Engine = new SQLEngine();
+                            Engine.Process(file);
+                            break;
+                        }
+
                         Engine = new TXTEngine();
                         Engine.Process(file);
                         break;
